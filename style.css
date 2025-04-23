@@ -6,8 +6,9 @@
 }
 
 body, html {
-  margin: 0;
+  margin:0;
   height: 100%;
+  overflow: hidden;
 }
 
 #bg-gif {
@@ -23,16 +24,17 @@ body, html {
 .overlay {
   background-color: rgba(0, 0, 0, 0.75);
   color: white;
-  height: 100vh;
+  height: 100vh; 
   width: 100%;
   padding: 90px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center; 
   overflow-y: auto;
   padding-bottom: 20px;
 }
+
 
 .profile-container {
   text-align: center;
@@ -63,11 +65,11 @@ body, html {
   padding: 20px;
   backdrop-filter: blur(10px);
   transition: transform 0.3s;
-  height: 152px;
+  height:152px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; 
 }
 
 .box:hover {
@@ -90,6 +92,8 @@ body, html {
   transform: translateY(-5px);
 }
 
+
+
 .social-links-box {
   background-color: black;
   border-radius: 12px;
@@ -98,22 +102,21 @@ body, html {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; 
   width: 100%;
-  margin: 0 auto;
-  max-width: 500px;
+  margin: 0 auto; 
+  max-width: 500px; 
 }
 
 .social-links-box:hover {
   transform: translateY(-5px);
   background-color: darkorange;
 }
-
 .social-links {
   display: flex;
   gap: 1rem;
   margin-top: 10px;
-  justify-content: center;
+  justify-content: center; 
 }
 
 .social-links a img {
@@ -126,10 +129,47 @@ body, html {
 }
 
 .daftpunk {
-  transition: all 0.3s ease;
+  transition: all 0.3s ease; 
+  border-radius:18px
 }
 
 .daftpunk:hover {
   transform: translateY(-5px);
-  box-shadow: 2px 12px 12px rgba(2, 0, 0, 0.6);
+  box-shadow: 2 12px 12px rgba(2, 0, 0, 0.6);
+}
+
+.icon-wrapper {
+  position: relative;
+  display: inline-block;
+  transition: opacity 0.3s ease;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 1;
+}
+
+.icon-wrapper:hover .tooltip {
+  background-color:orangered;
+  opacity: 1;
+}
+
+.icons:hover .icon-wrapper {
+  opacity: 0.3;
+}
+
+.icons .icon-wrapper:hover {
+  opacity: 1;
 }
